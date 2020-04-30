@@ -1,0 +1,41 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+    -moz-user-select: none; /* Firefox*/
+    -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+    -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+    user-select: none; /* Propriété standard */
+}
+
+@font-face{
+    font-family: "Merriweather";
+    src: url("../fonts/merriweather/merriweather-regular.ttf");
+}
+
+body{
+    background-image: url("../images/bg-blue.jpg");
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Merriweather";
+}
+main section {
+    height: 100vh;
+}
+
+h2{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 4px #000000, 0 1px 4px #000000;
+}
+h1{
+    font-size: 1.5em;
+    font-weight: bold;
+}
