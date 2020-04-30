@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
     
     /* Voir apès */
     /* opacity: 0.5;
