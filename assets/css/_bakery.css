@@ -5,11 +5,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
+    background: rgb(3,3,11);
+    background: linear-gradient(0deg, rgba(3,3,11,0.9542191876750701) 14%, rgba(0,0,0,0.12788865546218486) 40%, rgba(0,0,0,0.738532913165266) 89%);
     
-    /* Voir apès */
-    /* opacity: 0.5;
-    background-image: linear-gradient(to bottom, white -50%, black) */
+
+    
  
 }
 
@@ -31,9 +31,22 @@
    background-image: url("../images/perfect-cookie.png");
    background-size: cover;  
    margin-top: 50%;
- 
-   border-radius: 100%;
-   box-shadow: 10px 10px 10px ;
-
+   
+   border-radius: 100%;    /* Trouver pk cercle noir arrière  */
+   box-shadow: 0px 1px 70px ;
 }
+
+/* survol curser pointer, image s'agrandie */
+#bigCookie:hover{
+    cursor: pointer;
+    transform: scale(1.1);   
+}
+
+/* clic image rétrécit 0.95 fois taille d'origine  */
+#bigCookie:active{
+    transform: scale(0.95);   
+}
+
+
+
 
