@@ -1,6 +1,7 @@
 #production{
     min-width: 500px;
     flex: 2;
+    background: linear-gradient(180deg, rgba(18, 17, 17, 0.738532913165266) 7%, rgba(0,0,0,0.12788865546218486) 25%);
 }
 hr {
     background-image: url("../images/panel-horizontal.png");
@@ -14,5 +15,8 @@ hr {
 .scrollbar::-webkit-scrollbar {
     width: 10px;
     background: #f1f1f1;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
 }
   
