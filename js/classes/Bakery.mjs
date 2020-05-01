@@ -42,8 +42,4 @@ class Bakery{
     }
 }
 
-//let b = new Bakery('amine')
-//b.name = "leo"
-//console.log(b.name)
-
-//module.exports = Bakery
+module.exports = Bakery
