@@ -1,4 +1,4 @@
-class Building{
+export default class Building{
     constructor({name, description, cookiesPerSecond,cost}, number = 0){
         this._name = name
         this._description = description

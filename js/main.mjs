@@ -1,3 +1,3 @@
 import Bakery from './dom/BakeryDom.mjs'
-
-console.log(new Bakery)
+import Store from './dom/StoreDom.mjs'
+console.log(new Bakery, new Store)
