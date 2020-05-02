@@ -1,1 +1,3 @@
-import myBakery from './dom/BakeryDom.mjs'
+import bkr from './dom/BakeryDom.mjs'
+
+console.log(bkr)

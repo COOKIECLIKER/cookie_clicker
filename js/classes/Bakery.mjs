@@ -1,4 +1,4 @@
-class Bakery{
+export default class Bakery{
     constructor(name = 'mal', cookies = 0, buildings = [], cookiesPerClick = 1, cookiesPerSecond = 0){
         this._name = name
         this._cookies = cookies
@@ -41,5 +41,3 @@ class Bakery{
         this._cookiesPerSecond = newCookiesPerSecond
     }
 }
-
-module.exports = Bakery
