@@ -1,6 +1,8 @@
 import Bakery from '../classes/Bakery.mjs'
 
-const bkr = new Bakery("M.A.L")
-
-export default bkr
+export default class BakeryDom{
+    constructor(){
+        this._Bakery = new Bakery("M.A.L")
+    }
+}
  
