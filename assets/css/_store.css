@@ -10,6 +10,7 @@
     background-image: url('../images/panel-horizontal.png');
     margin-top: 15px;
     min-height: 16px;
+    background-repeat: no-repeat;
 }
 
 #buildings:hover::before {

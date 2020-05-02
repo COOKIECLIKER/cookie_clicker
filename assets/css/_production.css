@@ -7,16 +7,5 @@ hr {
     background-image: url("../images/panel-horizontal.png");
     height: 16px;
     margin-top: 15px;
+    border: none;
 }
-.scrollbar {
-    overflow-y: scroll;
-}
-
-.scrollbar::-webkit-scrollbar {
-    width: 10px;
-    background: #f1f1f1;
-}
-.scrollbar::-webkit-scrollbar-thumb {
-    background: #888;
-}
-  
