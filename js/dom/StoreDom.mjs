@@ -4,6 +4,7 @@ import Building from '../classes/Building.mjs'
 
 export default class StoreDom{
     constructor(){
+        this._Building = new Building({name : "My", cost : 60})
         document.getElementById("buildings").innerHTML =`<div id="building-cursor" class="locked disabled">
         <div class="icon"></div>
         <div class="container">
