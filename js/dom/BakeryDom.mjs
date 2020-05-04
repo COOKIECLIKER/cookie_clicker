@@ -12,8 +12,8 @@ export default class BakeryDom{
             var span = document.createElement('span')
             span.innerText = `+${this._Bakery.cookiesPerClick}`
             span.classList.add('plusPlus')
-            span.style.top = `${event.clientY - 250}px`
-            span.style.left = `${event.clientX}px`
+            span.style.top = `${event.clientY - 130}px`
+            span.style.left = `${event.clientX - 35}px`
             document.getElementById('bigCookie').append(span)
             span.addEventListener('animationend', ()=>{
                 span.remove()
