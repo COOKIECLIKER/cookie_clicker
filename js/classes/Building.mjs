@@ -6,6 +6,18 @@ export default class Building{
         this._cookiesPerSecond = cookiesPerSecond
         this._cost = cost
     }
+    generateBuilding(elm){
+        elm.innerHTML += `
+        <div id="building-${this.name.toLowerCase()}" class="locked disabled">
+            <div class="icon"></div>
+            <div class="container">
+                <div class="name">${this.name.toLowerCase()}</div>
+                <div class="cost">${this.cost}</div>
+            </div>
+            <div class="number">${this.number}</div>
+        </div>
+        `
+    }
     get name(){
         return this._name
     }
