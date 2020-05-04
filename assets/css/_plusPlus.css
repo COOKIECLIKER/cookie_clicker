@@ -1,0 +1,26 @@
+.plusPlus{
+    font-size: 1.3em;
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    z-index: 100;
+    opacity: 1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-name: opac;
+}
+
+@keyframes opac{
+    20%{
+        opacity: .50;
+        top: -66.66px;
+    }
+    50%{
+        opacity: .20;
+        top: -133.32px;
+    }
+    100%{
+        opacity: 0;
+        top: -200px;
+    }
+}

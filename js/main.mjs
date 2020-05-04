@@ -1,3 +1,4 @@
-import Bakery from './dom/BakeryDom.mjs'
-import Store from './dom/StoreDom.mjs'
-console.log(new Bakery, new Store)
+import BakeryDom from './dom/BakeryDom.mjs'
+import StoreDom from './dom/StoreDom.mjs'
+var bk = new BakeryDom
+var st = new StoreDom

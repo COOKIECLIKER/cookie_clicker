@@ -6,8 +6,8 @@ export default class Bakery{
         this._cookiesPerClick = cookiesPerClick
         this._cookiesPerSecond = cookiesPerSecond
     }
-    get name(){
-        return this._name
+    bakeCookies(howMany){
+        return this.cookies += howMany
     }
     set name(newName){
         this._name = newName
