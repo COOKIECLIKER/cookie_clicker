@@ -1,5 +1,5 @@
 /* Tuile cursor */
-#buildings #building-cursor{
+#buildings > div {
     width: 100%;
     height: 62px;
     position: relative;
@@ -8,59 +8,74 @@
     align-items: center;
     background: url("../images/store-tile.jpg") no-repeat;
     background-size: cover;
-    cursor: pointer;     
+    cursor: pointer;
+    transition-property: all;
+    transition-timing-function: ease-in-out;    
 }
 
-#buildings #building-cursor:hover{
+#buildings > div:hover{
     box-shadow: 0px 0px 15px 3px #ffffff inset;
 }
 
-#buildings #building-cursor .container{
-    padding-left: 10px;  
+.container{
+    padding-left: 20px;  
 }
 
-#buildings #building-cursor .icon{
-    width: 20%;
-    height: 60px;
+.locked .icon {
     background: url("../images/buildings.png") no-repeat;
-    background-position-x:30%; 
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: -4px;
 }
  
-#buildings #building-cursor .name , .cost{
-    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.0);
-    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.0);
+.name, .cost {
+    font-weight: bold;
+    text-shadow: 0 0 4px #000000, 0 1px 4px #000000;
 }
-
-#buildings #building-cursor .name{
+.name {
+    font-size: 1.3em;
+}
+.cost {
+    font-size: 0.7em;
+    color: #66ff66;
+    display: flex;
+}
+#buildings > div.name{
     font-size: 1.3rem;  
 }
-
-#buildings #building-cursor .cost{
- position: relative;
- display: flex;
- /* justify-content: space-between; */
-} 
-
 .cost::before{
     content: url("../images/money.png");
     padding-right: 5px;
 }
-
-#buildings #building-cursor .locked{
-    color: #ff6666;    
-}
-
-#buildings #building-cursor .disabled{
+.disabled .cost {
     color: #ff6666;
     filter: grayscale(50%);
-} 
+}
+.disabled {
+    filter: brightness(40%);
+}
 
-
+/* Tuile cursor */
+#building-cursor .icon{
+    background-position: 30% 0; 
+}
 
 /* Tuile  Grandma */
+#building-grandma .icon{
+    background-position:30% 6%; 
+}
 
 /* Tuile  Farm */
+#building-farm .icon{
+    background-position:30% 18%; 
+}
 
 /* Tuile  Mine */
-
+#building-mine .icon{
+    background-position:30% 23.5%; 
+}
 /* Tuile  Factory*/
+#building-factory .icon{
+    background-position:30% 29.5%; 
+}

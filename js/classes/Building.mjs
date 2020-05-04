@@ -11,7 +11,7 @@ export default class Building{
         <div id="building-${this.name.toLowerCase()}" class="locked disabled">
             <div class="icon"></div>
             <div class="container">
-                <div class="name">${this.name.toLowerCase()}</div>
+                <div class="name">${this.name.charAt(0).toUpperCase()}${this.name.substring(1).toLowerCase()}</div>
                 <div class="cost">${this.cost}</div>
             </div>
             <div class="number">${this.number}</div>

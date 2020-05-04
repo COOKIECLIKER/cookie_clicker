@@ -9,6 +9,9 @@ export default class Bakery{
     bakeCookies(howMany){
         return this.cookies += howMany
     }
+    get name(){
+        return this._name
+    }
     set name(newName){
         this._name = newName
     }
