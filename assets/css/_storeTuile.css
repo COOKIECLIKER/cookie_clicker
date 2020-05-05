@@ -21,7 +21,7 @@
     padding-left: 20px;  
 }
 
-.locked .icon {
+.icon {
     background: url("../images/buildings.png") no-repeat;
     width: 60px;
     height: 60px;
@@ -56,11 +56,11 @@
     filter: brightness(40%);
 }
 
+
 /* Tuile cursor */
 #building-cursor .icon{
     background-position: 30% 0; 
 }
-
 /* Tuile  Grandma */
 #building-grandma .icon{
     background-position:30% 6%; 
