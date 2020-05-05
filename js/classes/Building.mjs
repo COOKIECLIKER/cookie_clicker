@@ -17,6 +17,7 @@ export default class Building{
             <div class="number">${this.number}</div>
         </div>
         `
+        return this
     }
     get name(){
         return this._name
