@@ -55,27 +55,32 @@
 .disabled {
     filter: brightness(40%);
 }
-
-
-/* Tuile cursor */
-#building-cursor .icon{
-    background-position: 30% 0; 
+.enabled .cost {
+    color: #66ff66;;
 }
+
+.unlocked .icon{
+    background-position-x: 0px; 
+}
+.locked .icon {
+    background-position-x: -65px;
+}
+
 /* Tuile  Grandma */
 #building-grandma .icon{
-    background-position:30% 6%; 
+    background-position-y: 6%; 
 }
 
 /* Tuile  Farm */
 #building-farm .icon{
-    background-position:30% 18%; 
+    background-position-y: 18%; 
 }
 
 /* Tuile  Mine */
 #building-mine .icon{
-    background-position:30% 23.5%; 
+    background-position-y: 23.5%; 
 }
 /* Tuile  Factory*/
 #building-factory .icon{
-    background-position:30% 29.5%; 
+    background-position-y: 29.5%; 
 }

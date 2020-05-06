@@ -1,5 +1,5 @@
 export default class Bakery{
-    constructor(name = 'M.A.L', cookies = 0, buildings = [], cookiesPerClick = 1, cookiesPerSecond = 0){
+    constructor(name = 'M.A.L', cookies = 0, buildings = [], cookiesPerClick = 10000, cookiesPerSecond = 0){
         this._name = name
         this._cookies = cookies
         this._buildings = buildings

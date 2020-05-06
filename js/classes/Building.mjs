@@ -5,6 +5,7 @@ export default class Building{
         this._number = number
         this._cookiesPerSecond = cookiesPerSecond
         this._cost = cost
+        this._display = false;
     }
     generateBuilding(elm){
         elm.innerHTML += `
@@ -17,40 +18,22 @@ export default class Building{
             <div class="number">${this.number}</div>
         </div>
         `
+        this._display = true;
         return this
     }
     get name(){
         return this._name
     }
-    set name(name){
-        this._name = name
-    }
 
-    get description(){
-        return this._description
-    }
-    set description(description){
-        this._description = description
+    get display(){
+        return this._display;
     }
 
     get number(){
         return this._number
     }
-    set number(number){
-        this._number = number
-    }
-
-    get cookiesPerSecond(){
-        return this._cookiesPerSecond
-    }
-    set cookiesPerSecond(cookiesPerSecond){
-        this._cookiesPerSecond = cookiesPerSecond
-    }
-
+    
     get cost(){
         return this._cost
-    }
-    set cost(cost){
-        this._cost = cost
     }
 }
