@@ -21,72 +21,47 @@ export default class BakeryDom{
             })
             
             /* Activation des tuiles et affichage des suivantes */
-            if(this._Bakery.cookies >= st.cursor.cost){
-                var cursorBuilding = document.getElementById("building-cursor");
-                cursorBuilding.classList.remove("locked");
-                cursorBuilding.classList.add("unlocked");
-                cursorBuilding.classList.remove("disabled");
-                cursorBuilding.classList.add("enabled");
-                cursorBuilding.addEventListener('click', () => {
-                    cursorBuilding.style["box-shadow"] = "0px 0px 15px 3px #000000 inset"
-                })
-                
-            } 
-
-            if(this._Bakery.cookies >= st.grandma.cost){
-                var grandmaBuilding = document.getElementById("building-grandma");
-                grandmaBuilding.classList.remove("locked");
-                grandmaBuilding.classList.add("unlocked");
-                grandmaBuilding.classList.remove("disabled");
-                grandmaBuilding.classList.add("enabled");
-                if (st.farm.display == false){
-                    st.farm.generateBuilding(document.getElementById('buildings'));
-                }
-                grandmaBuilding.addEventListener('click', () => {
-                    grandmaBuilding.style["box-shadow"] = "0px 0px 15px 3px #000000 inset"
-                })
-            }
-
-            if(this._Bakery.cookies >= st.farm.cost){
-                var farmBuilding = document.getElementById("building-farm");
-                farmBuilding.classList.remove("locked");
-                farmBuilding.classList.add("unlocked");
-                farmBuilding.classList.remove("disabled");
-                farmBuilding.classList.add("enabled");
-                if (st.mine.display == false){
-                    st.mine.generateBuilding(document.getElementById('buildings'));
-                }
-                farmBuilding.addEventListener('click', () => {
-                    farmBuilding.style["box-shadow"] = "0px 0px 15px 3px #000000 inset"
-                })
-            }
-
-            if(this._Bakery.cookies >= st.mine.cost){
-                var mineBuilding = document.getElementById("building-mine");
-                mineBuilding.classList.remove("locked");
-                mineBuilding.classList.add("unlocked");
-                mineBuilding.classList.remove("disabled");
-                mineBuilding.classList.add("enabled");
-                if (st.factory.display == false){
-                    st.factory.generateBuilding(document.getElementById('buildings'));
-                }
-                mineBuilding.addEventListener('click', () => {
-                    mineBuilding.style["box-shadow"] = "0px 0px 15px 3px #000000 inset"
-                })
-            }
-
-            if(this._Bakery.cookies >= st.factory.cost){
-                var factoryBuilding = document.getElementById("building-factory");
-                factoryBuilding.classList.remove("locked");
-                factoryBuilding.classList.add("unlocked");
-                factoryBuilding.classList.remove("disabled");
-                factoryBuilding.classList.add("enabled");
-                factoryBuilding.addEventListener('click', () => {
-                    factoryBuilding.style["box-shadow"] = "0px 0px 15px 3px #000000 inset"
-                })
-            }
-            
+            this.building(st.cursor.cost, "building-cursor", st.farm)
+            this.building(st.grandma.cost, "building-grandma", st.farm)
+            this.building(st.farm.cost, "building-farm", st.mine)
+            this.building(st.mine.cost, "building-mine", st.factory)
+            this.building(st.factory.cost, "building-factory", st.cursor)
         })
     }
+
+    /* Fontion pour activer des tuiles et afficher des suivantes */
+    building(costBuilding, idBuilding, buidPro){
+        if(this._Bakery.cookies >= costBuilding){
+            var building = document.getElementById(idBuilding);
+
+            /* La tuile d’un bâtiment de production se débloque (unlocked) et s’active (enabled) */
+            building.classList.remove("locked");
+            building.classList.add("unlocked");
+            building.classList.remove("disabled");
+            building.classList.add("enabled");
+
+            // La tuile du prochain bâtiment de la liste qui n’est pas affichée apparaît
+            if (buidPro.display == false){
+                buidPro.generateBuilding(document.getElementById('buildings'));
+            }
+
+            // Au clic sur une tuile débloquée et activée, l’ombre intérieure devient noire
+            building.addEventListener('click', () => {
+                building.style["box-shadow"] = "0px 0px 15px 3px #000000 inset";
+                setTimeout(() => {
+                    building.style["box-shadow"] = "none";
+                }, 300)
+                this._Bakery.cookies -= costBuilding;
+                document.querySelector('#cookiesStock span').innerText = this._Bakery.cookies
+
+                //  La tuile se désactive lorsque le stock de cookies est trop petit
+                if(this._Bakery.cookies < costBuilding){
+                    building.classList.remove("enabled");
+                    building.classList.add("disabled");
+                }
+            })
+        }
+    }
+
 }
  
