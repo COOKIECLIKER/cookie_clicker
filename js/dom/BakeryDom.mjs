@@ -60,6 +60,16 @@ export default class BakeryDom{
                     building.classList.add("disabled");
                 }
             })
+               //Activation du son Alèatoire  Alèatoire 
+          var alea = Math.floor(Math.random()*7)
+          var path = `./assets/sounds/click${alea}.mp3`
+          var audio = document.createElement("audio");
+          audio.src = path; 
+          audio.id = `click${alea}`
+          document.getElementById("game").append();
+          document.getElementById(`click${alea}`)
+          audio.play();  
+
         }
     }
 
